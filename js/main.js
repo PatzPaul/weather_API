@@ -1,5 +1,6 @@
 let longitude = "1.360321";
 let latitude = "103.846733";
+var mykey=config.API_KEY;
 
 function loadSite () {
   if (navigator.geolocation) { // device can return its location
@@ -12,7 +13,7 @@ function loadSite () {
 }
 
 function getWeather () {
-  let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=79c3d29565f0de4e20ef585e781ddfdf`
+  let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=+ mykey`
   console.log(url);
   fetch(url)
   .then(function(response) {
